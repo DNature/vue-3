@@ -1,4 +1,21 @@
-import { createApp } from 'vue';
+import Vue from 'vue';
 import App from './App.vue';
+import gql from 'graphql-tag';
 
-createApp(App).mount('#app');
+import {
+  apolloProvider
+} from './vue-apollo';
+
+window.gql = gql;
+
+Vue.config.productionTip = false;
+Vue.config.devtools = true;
+
+window.Vue = Vue;
+
+const app = new Vue({
+  apolloProvider,
+  ...App
+});
+
+app.$mount('#app');

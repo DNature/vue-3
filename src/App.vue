@@ -7,11 +7,26 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+import gql from 'graphql-tag';
+
+const CWD = gql`
+  {
+    cwd
+  }
+`;
 
 export default {
   name: 'App',
+  apollo: {
+    cwd: {
+      query: CWD
+    }
+  },
   components: {
     HelloWorld
+  },
+  mounted() {
+    console.log(this.$apollo);
   }
 };
 </script>
