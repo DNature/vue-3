@@ -1,0 +1,7 @@
+# import "./projectFragment.gql"
+
+mutation openProject($path: String!, $force: Boolean) {
+  openProject(path: $path, force: $force) {
+    ...project
+  }
+}

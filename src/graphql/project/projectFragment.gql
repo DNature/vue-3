@@ -1,0 +1,14 @@
+fragment project on Project {
+  id
+  path
+  name
+  shortTitle
+  nameWithOwner
+  allDocsData {
+    title
+    description
+    fileName
+    path
+    content
+  }
+}
