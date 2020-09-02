@@ -2,9 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import gql from 'graphql-tag';
 
-import {
-  apolloProvider
-} from './vue-apollo';
+import { apolloProvider } from './vue-apollo';
+
+import './style/tailwind.css';
 
 window.gql = gql;
 
@@ -15,7 +15,7 @@ window.Vue = Vue;
 
 const app = new Vue({
   apolloProvider,
-  ...App
+  render: (h) => h(App)
 });
 
 app.$mount('#app');
