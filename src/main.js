@@ -15,7 +15,7 @@ window.Vue = Vue;
 
 const app = new Vue({
   apolloProvider,
-  render: (h) => h(App)
+  ...App
 });
 
 app.$mount('#app');

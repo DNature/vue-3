@@ -1,0 +1,3 @@
+query getImages {
+  getImages(path: "/home/divine/Desktop/Jose_project")
+}

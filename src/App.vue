@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <OpenProject class=" w-3/4 mx-auto" />
+    <Images msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Images from '@/components/Images.vue';
+import OpenProject from '@/components/OpenProject.vue';
 import gql from 'graphql-tag';
 
 const CWD = gql`
@@ -23,10 +25,8 @@ export default {
     }
   },
   components: {
-    HelloWorld
-  },
-  mounted() {
-    console.log(this.$apollo);
+    Images,
+    OpenProject
   }
 };
 </script>
