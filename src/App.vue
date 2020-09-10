@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-    <OpenProject class=" w-3/4 mx-auto" />
+    <!-- <OpenProject class=" w-3/4 mx-auto" /> -->
     <!-- <Images msg="Welcome to Your Vue.js App" /> -->
     <Editor />
   </div>
@@ -10,7 +10,7 @@
 <script>
 // import Images from '@/components/Images.vue';
 import Editor from '@/components/Editor.vue';
-import OpenProject from '@/components/OpenProject.vue';
+// import OpenProject from '@/components/OpenProject.vue';
 import gql from 'graphql-tag';
 
 const CWD = gql`
@@ -27,8 +27,8 @@ export default {
     }
   },
   components: {
-    Editor,
-    OpenProject
+    Editor
+    // OpenProject
   }
 };
 </script>
