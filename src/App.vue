@@ -2,12 +2,14 @@
   <div id="app">
     <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
     <OpenProject class=" w-3/4 mx-auto" />
-    <Images msg="Welcome to Your Vue.js App" />
+    <!-- <Images msg="Welcome to Your Vue.js App" /> -->
+    <Editor />
   </div>
 </template>
 
 <script>
-import Images from '@/components/Images.vue';
+// import Images from '@/components/Images.vue';
+import Editor from '@/components/Editor.vue';
 import OpenProject from '@/components/OpenProject.vue';
 import gql from 'graphql-tag';
 
@@ -25,7 +27,7 @@ export default {
     }
   },
   components: {
-    Images,
+    Editor,
     OpenProject
   }
 };
