@@ -1,6 +1,6 @@
 <template>
   <div class="my-12">
-    <div class="mt-6" v-if="this.$data.getImages.length">
+    <div class="mt-6" v-if="this.$data.getImages">
       <div v-for="(image, i) in this.$data.getImages" :key="i">
         <img :src="`http://localhost:4001/${image}`" alt="" />
         <h1 class="text-lg">{{ image }}</h1>
